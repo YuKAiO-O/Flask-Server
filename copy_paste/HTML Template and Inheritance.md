@@ -1,5 +1,4 @@
 ### Page 11
-============================================================================
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +15,6 @@
 ```
 
 ### Page 12
-============================================================================
 ```html
 <div class="gallery">
     {% for item in items %}
@@ -29,7 +27,6 @@
 ```
 
 ### Page 13
-============================================================================
 ```python
 @app.route("/")
 def home():
@@ -38,9 +35,7 @@ def home():
 ```
 
 ### Page 14
-============================================================================
 templates/base.html
----
 ```html
 <body>
     {% block content %}
@@ -49,7 +44,6 @@ templates/base.html
 ```
 
 templates/pages/home.html
----
 ```html
 {% extends "base.html" %}
 {% block content %}
@@ -65,9 +59,7 @@ templates/pages/home.html
 ```
 
 ### Page 15
-============================================================================
 templates/base.html
----
 ```html
 <body>
     {% block content %}
@@ -77,7 +69,6 @@ templates/base.html
 ```
 
 templates/pages/home.html
----
 ```html
 {% extends "base.html" %}
 {% block content %}
@@ -94,9 +85,7 @@ templates/pages/home.html
 ```
 
 ### Page 16
-============================================================================
 templates/base.html
----
 ```html
 <body>
     {% include 'header.html' %}
@@ -108,7 +97,6 @@ templates/base.html
 ```
 
 templates/header.html
----
 ```html
 <header>
     <h1>This is header</h1>
@@ -116,7 +104,6 @@ templates/header.html
 ```
 
 templates/footer.html
----
 ```html
 <footer>
     <h1>This is footer</h1>
@@ -124,15 +111,12 @@ templates/footer.html
 ```
 
 ### Page 17
-============================================================================
 templates/forms.html
----
 ```html
 {% macro input(name, value='', type='text') -%}
     <input type="{{ type }}" value="{{ value|e }}" name="{{ name }}">
 {%- endmacro %}
 ```
-
 ```html
 {% import 'forms.html' as forms %}
 <dl>
