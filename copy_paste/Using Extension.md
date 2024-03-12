@@ -1,5 +1,4 @@
 ### Page 29
-============================================================================
 ```python
 from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
@@ -21,7 +20,6 @@ class Product(db.Model):
 ```
 
 ### Page 31
-============================================================================
 ```python
 from database import db, Porduct
 db.init_app(app)
@@ -29,7 +27,6 @@ app.extensions["db"] = db
 ```
 
 ### Page 32
-============================================================================
 ```python
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = f"sqlite:///{ os.path.join(basedir, 'database.db') }"
@@ -40,7 +37,6 @@ app.extensions["db"] = db
 ```
 
 ### Page 34
-============================================================================
 ```python
 @app.route("/")
 def home():
@@ -55,7 +51,6 @@ def home():
 ```
 
 ### Page 35
-============================================================================
 ```python
 product = Product(  
                     id, 
@@ -69,7 +64,6 @@ db.session.commit()
 ```
 
 ### Page 36
-============================================================================
 ```python
 @app.route("/item/<id>")
 def item(id):
